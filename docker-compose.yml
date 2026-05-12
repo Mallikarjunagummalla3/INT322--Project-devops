@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  int332-app:
+    build: .
+    image: int332-app:latest
+    container_name: int332-container
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
